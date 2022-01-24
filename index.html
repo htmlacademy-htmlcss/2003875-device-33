@@ -27,11 +27,96 @@
           </li>
           <li class="navigation-item-top">
             <a class="navigation-link-top" href="#">Корзина</a>
+            <table class="cart-list">
+              <tr>
+                <td>
+                  <a href="#">
+                    <img class="device-image-small" src="" alt="">
+                  </a>
+                </td>
+                <td>
+                  <a href="#">
+                    <p class="device-title">Любительская селфи-палка</p>
+
+                  </a>
+                </td>
+                <td>
+                  <a class="visually-hidden" href="#">
+                    <span>Удалить из корзины</span>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="">
+                    <img class="device-image-small" src="" alt="">
+                  </a>
+                </td>
+                <td>
+                  <a href="#">
+                    <p class="device-title">Профессиональная селфи-палка</p>
+                  </a>
+                </td>
+                <td>
+                  <a href="#">
+                    <span class="visually-hidden">Удалить из корзины</span>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Товаров:<output name="number-of-items">2</output></p>
+                </td>
+                <td>
+                  <p>Сумма:<output name="total-cost">2000 ₽</output></p>
+                </td>
+              </tr>
+            </table>
+            <button class="open-cart-button" type="button">Открыть корзину</button>
           </li>
         </ul>
         <ul class="navigation-list-bottom">
           <li class="navigation-item-bottom">
-            <a class="navigation-link-bottom" href="#">Каталог товаров</a>
+            <a class="navigation-link-bottom" href="Catalog.html">Каталог товаров</a>
+            <table class="header-device-class-list">
+              <tr>
+                <td>
+                  <a href="#">
+                    <p class="header-device-class-item">Виртуальная реальность</p>
+                  </a>
+                </td>
+                <td>
+                  <a href="#">
+                    <p class="header-device-class-item">Фитнес-браслеты</p>
+                  </a>
+                </td>
+                <td>
+                  <a href="#">
+                    <p class="header-device-class-item">Квадрокоптеры</p>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#">
+                    <p class="header-device-class-item">Моноподы для селфи</p>
+                  </a>
+                </td>
+                <td>
+                  <a href="#">
+                    <p class="header-device-class-item">Умные часы</p>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="#">
+                    <p class="header-device-class-item">Экшн-камеры</p>
+                  </a>
+                </td>
+              </tr>
+            </table>
+
           </li>
           <li class="navigation-item-bottom">
             <a class="navigation-link-bottom" href="#">Доставка</a>
@@ -173,33 +258,40 @@
         </ul>
       </section>
 
-      <h2 class="visually hidden">Меню услуг</h2>
       <section class="services">
+        <h2 class="visually hidden">Меню услуг</h2>
         <ul class="services-list">
           <li class="services-item">
             <a class="services-item-link" href="#">Доставка</a>
+          </li>
+          <li class="services-item">
+            <a class="services-item-link" href="#">Гарантия</a>
+          </li>
+          <li class="services-item">
+            <a class="services-item-link" href="#">Кредит</a>
+          </li>
+        </ul>
+        <ul class="services-description-list">
+          <li class="services-description-item">
             <h3 class="services-title">Доставка</h3>
             <p class="services-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду
               совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
           </li>
-          <li class="services-item">
-            <a class="services-item-link" href="#">Гарантия</a>
+          <li class="services-description-item">
             <h3 class="services-title">Гарантия</h3>
             <p class="services-description">Если из-за возгорания купленного у нас товара у вас
               сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
           </li>
-          <li class="services-item">
-            <a class="services-item-link" href="#">Кредит</a>
+          <li class="services-description-item">
             <h3 class="services-title">Кредит</h3>
             <p class="services-description">Залезть в долговую яму стало проще! Кредитные консультанты
               подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
           </li>
         </ul>
+        <div class="delivery-optional">
+          <a class="delivery-option" href="#">Доставим редкий товар под заказ</a>
+        </div>
       </section>
-
-      <div class="delivery-optional">
-        <a class="delivery-option" href="#">Доставим редкий товар под заказ</a>
-      </div>
 
       <section class="about-us">
         <h2 class="about-us-title">О нас</h2>
@@ -241,20 +333,17 @@
             <label for="email-field" class="visually-hidden">E-mail:</label>
             <input class="field" placeholder="Ваш e-mail" type="email" name="subscriber-email" id="email-field" required>
             <button class="subscribe-button" type="submit">Подписаться</button>
-            <label class="subscribe-checker">
-              <input type="checkbox" name="free-offer" checked disabled>
-                Это бесплатно
-            </label>
+            <span class="subscribe-feature">&#x2714 Это бесплатно</span>
           </form>
       </section>
     </main>
 
     <footer class="page-footer">
-      <h3 class="visually-hidden">Контакты</h3>
+      <h2 class="visually-hidden">Контакты</h2>
       <img class="page-footer-logo" src="" alt="Логотип «Девайс».">
+      <h3 class="visually-hidden">Наш адрес</h3>
       <address class="footer-adress">
         <p class="about-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-        <a class="footer-contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
       </address>
       <nav class="footer-navigation">
         <h3 class="visually-hidden">Навигация</h3>
@@ -270,6 +359,10 @@
           </li>
         </ul>
       </nav>
+      <h3 class="visually-hidden">Телефон для связи</h3>
+      <p class="about-text">
+      <a class="footer-contacts-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
+      </p>
       <h3 class="visually-hidden">Мы в соцсетях</h3>
       <ul class="footer-social-list">
         <li class="footer-social-item">
