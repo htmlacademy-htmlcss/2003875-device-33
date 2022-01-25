@@ -31,98 +31,48 @@
             <li class="navigation-item-top">
               <span class="number-of-items-in-cart">2</span>
               <a class="navigation-link-top" href="#">Корзина</a>
-              <table class="cart-list">
-                <tr>
-                  <td>
-                    <a href="#">
-                      <img class="device-image-small" src="" alt="">
-                    </a>
-                  </td>
-                  <td>
-                    <a href="#">
-                      <p class="device-title">Любительская селфи-палка</p>
-
-                    </a>
-                  </td>
-                  <td>
-                    <a class="visually-hidden" href="#">
-                      <span>Удалить из корзины</span>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="">
-                      <img class="device-image-small" src="" alt="">
-                    </a>
-                  </td>
-                  <td>
-                    <a href="#">
-                      <p class="device-title">Профессиональная селфи-палка</p>
-                    </a>
-                  </td>
-                  <td>
-                    <a href="#">
-                      <span class="visually-hidden">Удалить из корзины</span>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <p>Товаров:<output name="number-of-items">2</output></p>
-                  </td>
-                  <td colspan="2">
-                    <p>Сумма:<output name="total-cost">2000 ₽</output></p>
-                  </td>
-                </tr>
-              </table>
-              <button class="open-cart-button" type="button">Открыть корзину</button>
+              <ul class="cart-list">
+                <li class="">
+                  <img class="device-image-small" src="" alt="">
+                  <p class="device-title">Любительская селфи-палка</p>
+                </li>
+                <li>
+                  <img class="device-image-small" src="" alt="">
+                  <p class="device-title">Профессиональная селфи-палка</p>
+                </li>
+              </ul>
+              <a class="open-cart-link" href="#">Открыть корзину</a>
             </li>
           </ul>
+
           <ul class="navigation-list-bottom">
             <li class="navigation-item-bottom">
               <a class="navigation-link-bottom" href="catalog.html">Каталог товаров</a>
-              <table class="header-device-class-list">
-                <tr>
-                  <td>
-                    <a href="#">
-                      <p class="header-device-class-item">Виртуальная реальность</p>
-                    </a>
-                  </td>
-                  <td>
-                    <a href="#">
-                      <p class="header-device-class-item">Фитнес-браслеты</p>
-                    </a>
-                  </td>
-                  <td>
-                    <a href="#">
-                      <p class="header-device-class-item">Квадрокоптеры</p>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="#">
-                      <p class="header-device-class-item">Моноподы для селфи</p>
-                    </a>
-                  </td>
-                  <td>
-                    <a href="#">
-                      <p class="header-device-class-item">Умные часы</p>
-                    </a>
-                  </td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="#">
-                      <p class="header-device-class-item">Экшн-камеры</p>
-                    </a>
-                  </td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </table>
+
+              <ul class="header-device-class-list">
+                <li class="header-device-class-item">
+                  <a class="header-device-class-link" href="#">Виртуальная реальность</a>
+                </li>
+                <li class="header-device-class-item">
+                  <a class="header-device-class-link" href="#">Моноподы для селфи</a>
+                </li>
+                <li class="header-device-class-item">
+                  <a class="header-device-class-link" href="#">Экшн-камеры</a>
+                </li>
+              </ul>
+              <ul class="header-device-class-list">
+                <li class="header-device-class-item">
+                  <a class="header-device-class-link" href="#">Фитнес-браслеты</a>
+                </li>
+                <li class="header-device-class-item">
+                  <a class="header-device-class-link" href="#">Умные часы</a>
+                </li>
+              </ul>
+              <ul class="header-device-class-list">
+                <li class="header-device-class-item">
+                  <a class="header-device-class-link" href="#">Квадрокоптеры</a>
+                </li>
+              </ul>
 
             </li>
             <li class="navigation-item-bottom">
@@ -236,38 +186,30 @@
 
           <section class="catalog-product-cards">
             <h3 class="visually-hidden">Список товаров</h3>
-            <div class="product-card">
+            <a class="product-card" href="product.html">
               <img class="product-card-image" src="" alt="Стандартная селфи-палка для смартфона.">
-              <a class="product-card-link" href="product.html">
-                <span class="more-info">Подробнее</span>
-                <h3 class="product-card-title">Любительская селфи-палка</h3>
-              </a>
+              <div class="product-card-link">Подробнее</div>
+              <h3 class="product-card-title">Любительская селфи-палка</h3>
               <p class="product-card-price">500 ₽</p>
-            </div>
-            <div class="product-card">
+            </a>
+            <a class="product-card" href="product.html">
               <img class="product-card-image" src="" alt="Длинная селфи-палка с управлением.">
-              <a class="product-card-link" href="product.html">
-                <span class="more-info">Подробнее</span>
-                <h3 class="product-card-title">Профессиональная селфи-палка</h3>
-              </a>
+              <div class="product-card-link">Подробнее</div>
+              <h3 class="product-card-title">Профессиональная селфи-палка</h3>
               <p class="product-card-price">1 500 ₽</p>
-            </div>
-            <div class="product-card">
+            </a>
+            <a class="product-card" href="product.html">
               <img class="product-card-image" src="" alt="Яркая селфи-палка в форме поплавка для экшн-камеры.">
-              <a class="product-card-link" href="product.html">
-                <span class="more-info">Подробнее</span>
-                <h3 class="product-card-title">Непотопляемая селфи-палка</h3>
-              </a>
+              <div class="product-card-link" >Подробнее</div>
+              <h3 class="product-card-title">Непотопляемая селфи-палка</h3>
               <p class="product-card-price">2 500 ₽</p>
-            </div>
-            <div class="product-card">
+            </a>
+            <a class="product-card" href="product.html">
               <img class="product-card-image" src="" alt="Селфи-палка в форме руки.">
-              <a class="product-card-link" href="product.html">
-                <span class="more-info">Подробнее</span>
-                <h3 class="product-card-title">Селфи-палка «Следуй за мной»</h3>
-              </a>
+              <div class="product-card-link">Подробнее</div>
+              <h3 class="product-card-title">Селфи-палка «Следуй за мной»</h3>
               <p class="product-card-price">1 500 ₽</p>
-            </div>
+            </a>
 
             <button class="button pagination-show-more" type="button">Загрузить еще</button>
             <ul class="pagination">
