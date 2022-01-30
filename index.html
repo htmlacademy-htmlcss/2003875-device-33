@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Интернет-магазин «Девайс»</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
@@ -28,17 +29,23 @@
           <li class="navigation-item-top">
             <span class="number-of-items-in-cart">2</span>
             <a class="navigation-link-top" href="#">Корзина</a>
-            <ul class="cart-list">
-              <li class="">
-                <img class="device-image-small" src="images/catalog/product-1-small.jpg" width="39" height="43" alt="Стандартная селфи-палка.">
-                <p class="device-title">Любительская селфи-палка</p>
-              </li>
-              <li>
-                <img class="device-image-small" src="images/catalog/product-2-small.jpg" width="39" height="43" alt="Длинная селфи-палка с управлением.">
-                <p class="device-title">Профессиональная селфи-палка</p>
-              </li>
-            </ul>
-            <a class="open-cart-link" href="#">Открыть корзину</a>
+            <div class="cart-list-block">
+              <ul class="cart-list">
+                <li>
+                  <img class="device-image-small" src="images/catalog/product-1-small.jpg" width="39" height="43" alt="Стандартная селфи-палка.">
+                  <p class="device-title">Любительская селфи-палка</p>
+                </li>
+                <li>
+                  <img class="device-image-small" src="images/catalog/product-2-small.jpg" width="39" height="43" alt="Длинная селфи-палка с управлением.">
+                  <p class="device-title">Профессиональная селфи-палка</p>
+                </li>
+              </ul>
+              <div class="cart-list-total">
+                <span>Товаров: 2</span>
+                <span>Сумма: 2000 ₽</span>
+              </div>
+              <a class="open-cart-link" href="#">Открыть корзину</a>
+            </div>
           </li>
         </ul>
 
@@ -76,10 +83,10 @@
             <a class="navigation-link-bottom" href="#">Доставка</a>
           </li>
           <li class="navigation-item-bottom">
-            <a class="navigation-link" href="#">Гарантия</a>
+            <a class="navigation-link-bottom" href="#">Гарантия</a>
           </li>
           <li class="navigation-item-bottom">
-            <a class="navigation-link" href="#">Контакты</a>
+            <a class="navigation-link-bottom" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -181,31 +188,49 @@
         <ul class="device-classes-list">
           <li class="device-class">
             <a class="device-class-link" href="#">
+              <div class="class-icon-box">
+                <img class="glasses-icon" src="images/3d-glasses.svg" width="97" height="55" alt="Иконка очков виртуальной реальности.">
+              </div>
               <h3 class="device-class-title">Виртуальная реальность</h3>
             </a>
           </li>
           <li class="device-class">
             <a class="device-class-link" href="#">
+              <div class="class-icon-box">
+                <img class="monopod-icon" src="images/monopod.svg" width="86" height="117" alt="Иконка монопода.">
+              </div>
               <h3 class="device-class-title">Моноподы для селфи</h3>
             </a>
           </li>
           <li class="device-class">
             <a class="device-class-link" href="#">
+              <div class="class-icon-box">
+                <img class="camera-icon" src="images/camera.svg" width="71" height="87" alt="Иконка экшн-камеры.">
+              </div>
               <h3 class="device-class-title">Экшн-камеры</h3>
             </a>
           </li>
           <li class="device-class">
             <a class="device-class-link" href="#">
+              <div class="class-icon-box">
+                <img class="fitness-tracker-icon" src="images/fitness-tracker.svg" width="108" height="65" alt="Иконка фитнесс-трекера.">
+              </div>
               <h3 class="device-class-title">Фитнес-браслеты</h3>
             </a>
           </li>
           <li class="device-class">
             <a class="device-class-link" href="#">
+              <div class="class-icon-box">
+                <img class="smart-watch-icon" src="images/smart-watch.svg" width="56" height="98" alt="Иконка умных часов.">
+              </div>
               <h3 class="device-class-title">Умные часы</h3>
             </a>
           </li>
           <li class="device-class">
             <a class="device-class-link" href="#">
+              <div class="class-icon-box">
+                <img class="quadrocopter-icon" src="images/quadrocopter-logo.svg" width="132" height="69" alt="Иконка квадрокоптера">
+              </div>
               <h3 class="device-class-title">Квадрокоптеры</h3>
             </a>
           </li>
@@ -230,28 +255,31 @@
             <h3 class="services-title">Доставка</h3>
             <p class="services-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду
               совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+            <img src="images/delivery-man.svg" width="136" height="164" alt="Иконка доставки.">
           </li>
           <li class="services-description-item">
             <h3 class="services-title">Гарантия</h3>
             <p class="services-description">Если из-за возгорания купленного у нас товара у вас
               сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+            <img src="images/warranty.svg" width="171" height="195" alt="Иконка гарантии.">
           </li>
           <li class="services-description-item">
             <h3 class="services-title">Кредит</h3>
             <p class="services-description">Залезть в долговую яму стало проще! Кредитные консультанты
               подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
+            <img src="images/credit.svg" width="156" height="188" alt="Иконка кредита.">
           </li>
         </ul>
         <div class="delivery-optional">
-          <a class="delivery-option" href="#">Доставим редкий товар под заказ</a>
+          <a class="delivery-option-link" href="#">Доставим редкий товар под заказ</a>
         </div>
       </section>
 
       <section class="about-us">
         <h2 class="about-us-title">О нас</h2>
-        <p class="about-us-description">Огромный выбор гаджетов не оставит равнодушным гика,
+        <p class="about-us-description">Огромный выбор гаджетов не оставит равнодушным<br>гика,
           который есть в каждом из нас.</p>
-        <p class="about-us-description">Мы можем доставить ваш товар в самые отдалённые
+        <p class="about-us-description">Мы можем доставить ваш товар в самые отдалённые<br>
           уголки России транспортными компаниями:</p>
         <ul class="delivery-companies-list">
           <li class="delivery-companies-item"><b>Меловые линии</b></li>
@@ -297,7 +325,7 @@
       <img class="page-footer-logo" src="images/logo-footer.svg" width="145" height="36" alt="Логотип «Девайс».">
       <h3 class="visually-hidden">Наш адрес</h3>
       <address class="footer-adress">
-        <p class="about-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+        <p class="adress-text">Санкт-Петербург, набережная<br>реки Карповки, 5, литера П.</p>
       </address>
       <nav class="footer-navigation">
         <h3 class="visually-hidden">Навигация</h3>
@@ -335,7 +363,14 @@
           </a>
         </li>
       </ul>
-      <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html<br>academy</a>
+      <a class="htmlacademy-link" href="https://htmlacademy.ru/">
+        <img src="images/html-academy-logo.svg" width="115" height="33" alt="Логотип HTML Academy.">
+      </a>
     </footer>
   </body>
 </html>
+
+
+
+
+
