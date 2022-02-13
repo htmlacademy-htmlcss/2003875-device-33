@@ -453,15 +453,20 @@ body {
 
 .device-classes {
   width: 1160px;
-  margin: 70px auto;
+  margin: 0 auto;
+  margin-top: 70px;
 }
 
 .device-classes-list {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   list-style-type: none;
+}
+
+.device-class:not(:nth-child(6n)) {
+  margin-right: 40px;
 }
 
 .device-class-title {
@@ -471,6 +476,8 @@ body {
   letter-spacing: -0.02em;
   line-height: 24px;
   margin: 0;
+  display: block;
+  height: 60px;
 }
 
 .device-class-link {
@@ -785,7 +792,7 @@ body {
   font-size: 16px;
   color: #ffffff;
   background-color: #444444;
-  height: 321px;
+  padding-bottom: 60px;
 }
 
 .page-footer-container {
@@ -817,7 +824,7 @@ body {
 }
 
 .footer-navigation-social-container {
-  width: 444px;
+  width: 600px;
 }
 
 .footer-navigation-list {
@@ -825,8 +832,13 @@ body {
   margin: 0;
   margin-top: 137px;
   display: flex;
-  justify-content: space-between;
   list-style-type: none;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-navigation-item:not(:nth-child(3n)) {
+  margin-right: 35px;
 }
 
 .footer-navigation-link {
@@ -843,7 +855,7 @@ body {
 .footer-social-list {
   padding: 0;
   margin: 0;
-  margin-top: 62px;
+  margin-top: 60px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -852,6 +864,8 @@ body {
 
 .footer-social-link {
   display: block;
+  width: 40px;
+  height: 40px;
 }
 
 .footer-social-item:not(:last-child) {
@@ -1020,19 +1034,15 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  row-gap: 44px;
 }
 
 .catalog-product-cards {
   grid-row: 2 / 3;
   padding: 70px 40px 78px 40px;
-}
-
-.product-card-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  column-gap: 40px;
-  row-gap: 44px;
 }
 
 .product-card {
@@ -1093,7 +1103,10 @@ body {
 .pagination-wrapper {
   align-self: center;
   display: flex;
+  justify-content: center;
   align-items: center;
+  width: 450px;
+  flex-wrap: wrap;
 }
 
 .pagination-link {
