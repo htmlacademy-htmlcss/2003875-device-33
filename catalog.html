@@ -35,27 +35,42 @@
               <a class="navigation-link-top" href="#">Корзина</a>
               <div class="cart-list-block">
                 <ul class="cart-list">
-                  <li>
+                  <li class="cart-list-item">
+                    <a class="cart-list-link" href="#">
                     <img class="device-image-small" src="images/catalog/product-1-small.jpg" width="39" height="43" alt="Стандартная селфи-палка.">
                     <p class="device-title">Любительская селфи-палка</p>
+                    </a>
+                    <span class="cart-list-delete-button">
+                      <img class="delete-button-image" src="images/delete-button.svg" alt="">
+                    </span>
                   </li>
-                  <li>
+                  <li class="cart-list-item">
+                    <a class="cart-list-link" href="#">
                     <img class="device-image-small" src="images/catalog/product-2-small.jpg" width="39" height="43" alt="Длинная селфи-палка с управлением.">
                     <p class="device-title">Профессиональная селфи-палка</p>
+                    </a>
+                    <span class="cart-list-delete-button">
+                      <img class="delete-button-image" src="images/delete-button.svg" alt="">
+                    </span>
                   </li>
                 </ul>
                 <div class="cart-list-total">
                   <span>Товаров: 2</span>
                   <span>Сумма: 2000 ₽</span>
                 </div>
-                <a class="open-cart-link" href="#">Открыть корзину</a>
+                <div class="open-cart-link-wrapper">
+                  <a class="open-cart-link" href="#">Открыть корзину</a>
+                </div>
               </div>
             </li>
           </ul>
 
           <ul class="navigation-list-bottom">
             <li class="navigation-item-bottom">
-              <a class="navigation-link-bottom" href="catalog.html">Каталог товаров</a>
+              <div class="navigation-item-wrapper">
+                <a class="navigation-link-bottom" href="catalog.html">Каталог товаров</a>
+                <img class="navigation-icon-bottom" src="images/catalog-button-plus.svg" width="50" height="50" alt="">
+              </div>
 
               <div class="header-device-class-container">
                 <ul class="header-device-class-list">
@@ -116,7 +131,7 @@
           </header>
 
           <div class="page-container">
-            <!-- <h2 class="visually-hidden">Список товаров с фильтрами</h2> -->
+            <h2 class="visually-hidden">Список товаров с фильтрами</h2>
             <section class="catalog-filters">
               <h3 class="catalog-filter-headline">Фильтр:</h3>
               <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
@@ -295,18 +310,21 @@
                 <h3 class="visually-hidden">Мы в соцсетях</h3>
                 <ul class="footer-social-list">
                   <li class="footer-social-item">
-                    <a class="visually-hidden" href="https://www.facebook.com/htmlacademy">
+                    <a class="footer-social-link" href="https://www.facebook.com/htmlacademy">
                       <span class="visually-hidden">Фэйсбук</span>
+                      <img src="/images/facebook-logo.svg" width="40" height="40" alt="">
                     </a>
                   </li>
                   <li class="footer-social-item">
-                    <a class="visually-hidden" href="https://www.instagram.com/htmlacademy/">
+                    <a class="footer-social-link" href="https://www.instagram.com/htmlacademy/">
                       <span class="visually-hidden">Инстаграм</span>
+                      <img src="/images/instagram-logo.svg" width="40" height="40" alt="">
                     </a>
                   </li>
                   <li class="footer-social-item">
-                    <a class="visually-hidden" href="https://twitter.com/htmlacademy_ru">
+                    <a class="footer-social-link" href="https://twitter.com/htmlacademy_ru">
                       <span class="visually-hidden">Твиттер</span>
+                      <img src="/images/twitter-logo.svg" width="40" height="40" alt="">
                     </a>
                   </li>
                 </ul>
