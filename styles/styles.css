@@ -63,10 +63,6 @@ body {
   outline-offset: 2px;
 }
 
-:disabled {
-  opacity: 0.3;
-}
-
 .page-header {
   margin-top: 40px;
   background-color: #ffe17f;
@@ -141,6 +137,10 @@ body {
   background-position: left 16px center;
 }
 
+.search-form input:disabled {
+  opacity: 0.3;
+}
+
 .search-form input::placeholder {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
@@ -166,6 +166,16 @@ body {
   width: 160px;
   padding: 8px 0;
   margin-left: -6px;
+}
+
+.search-button:disabled {
+  opacity: 0.3;
+  color: #000000;
+}
+
+.search-button:disabled:hover {
+  background: none;
+  color: #000000;
 }
 
 .search-button:hover {
@@ -291,6 +301,11 @@ body {
   opacity: 1;
 }
 
+.navigation-item-bottom:not(:first-child) .navigation-link-bottom:enabled {
+  border-bottom: 2px solid #000000;
+  padding-bottom: 4px;
+}
+
 .navigation-item-bottom:not(:first-child) .navigation-link-bottom:hover {
   opacity: 0.6;
 }
@@ -409,6 +424,12 @@ body {
   white-space: nowrap;
 }
 
+.open-cart-link.disabled {
+  pointer-events: none;
+  cursor: default;
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .open-cart-link:hover {
   background-color: #ffe17f;
 }
@@ -446,6 +467,11 @@ body {
   line-height: 18px;
   color: #000000;
   text-decoration: none;
+}
+
+.header-device-class-link:enabled {
+  border-bottom: 1px solid #000000;
+  padding-bottom: 2px;
 }
 
 .header-device-class-link:hover {
@@ -562,7 +588,13 @@ body {
   text-align: center;
   width: 210px;
   padding: 10px 5px;
-  background: linear-gradient(to bottom, #ffffff 16px, #ffe17f 16px, #ffe17f 24px, #ffffff 24px);
+  background: linear-gradient(to bottom, transparent 16px, #ffe17f 16px, #ffe17f 24px, transparent 24px);
+}
+
+.disabled-button {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.3;
 }
 
 .more-info:hover {
@@ -740,7 +772,6 @@ body {
   margin: 0;
   padding: 0;
   padding-left: 116px;
-  padding-top: ;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -790,6 +821,22 @@ body {
   width: 160px;
   padding: 10px 3px;
   text-align: center;
+  background: linear-gradient(to bottom, transparent 16px, #ffe17f 16px, #ffe17f 24px, transparent 24px);
+}
+
+.services-item-link.current-service {
+  background: none;
+  background-color: #000000;
+  padding-right: 120px;
+  color: #ffe17f;
+}
+
+.services-item-link.current-service:hover {
+  color: rgba(255, 225, 127, 0.6);
+}
+
+.services-item-link.current-service:active {
+  color: rgba(255, 225, 127, 0.3);
 }
 
 .services-title {
@@ -802,13 +849,6 @@ body {
   margin-bottom: 34px;
 }
 
-.delivery-optional {
-  background-color: #f0f0f0;
-  height: 100px;
-  padding: 0;
-  margin-top: 70px;
-}
-
 .delivery-option-link {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -818,20 +858,44 @@ body {
   color: #000000;
   text-decoration: none;
   text-transform: uppercase;
+  margin-top: 70px;
+  background-color: #f0f0f0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
-.delivery-car-logo {
-  padding: 35px 39px 34px 39px;
+.delivery-car-icon {
+  display: inline-block;
+  width: 125px;
+  height: 100px;
   background-color: #ffe17f;
-  margin: 0;
+  background-image: url("/images/delivery-car.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.info-logo {
-  padding: 30px 43px 30px 42px;
-  margin: 0;
+.delivery-option-link-text {
+  text-align: center;
+  width: 910px;
+}
+
+.delivery-option-link svg {
+  margin: 0 auto;
+}
+.delivery-option-link svg path {
+  opacity: 0.3;
+}
+
+.delivery-option-link:hover svg path {
+  opacity: 1;
+}
+
+.delivery-option-link:hover .delivery-car-icon {
+  background-color: #ffc700;
+}
+
+.delivery-option-link:active {
+  opacity: 0.3;
 }
 
 .about-us-and-contacts-wrapper {
@@ -853,6 +917,18 @@ body {
   color: #000000;
   margin-top: 40px;
   margin-bottom: 48px;
+  position: relative;
+}
+
+.about-us-title::before,
+.contacts-title::before {
+  content: '';
+  width: 84px;
+  height: 7px;
+  display: inline-block;
+  background-color: #000000;
+  position: absolute;
+  top: -40px;
 }
 
 .about-us-description,
@@ -863,8 +939,9 @@ body {
 
 .delivery-companies-list {
   margin: 0;
+  padding: 0;
   margin-bottom: 30px;
-  padding-left: 22px;
+  list-style-type: none;
 }
 
 .delivery-companies-item {
@@ -872,6 +949,11 @@ body {
   font-size: 18px;
   line-height: 40px;
   color: #000000;
+  background-image: url("/images/list-type.svg");
+  background-position: 3px center;
+  background-repeat: no-repeat;
+  background-size: 8px;
+  padding-left: 38px;
 }
 
 .about-us-more-info,
@@ -886,6 +968,18 @@ body {
   text-transform: uppercase;
   width: 250px;
   padding: 10px 6px;
+  background: linear-gradient(to bottom, transparent 16px, #ffe17f 16px, #ffe17f 24px, transparent 24px);
+}
+
+.about-us-more-info:hover,
+.contact-us:hover {
+  background: none;
+  background-color: #ffe17f;
+}
+
+.about-us-more-info:active,
+.contact-us:active {
+  background-color: #ffcc33;
 }
 
 .contacts-subtitle {
@@ -947,9 +1041,13 @@ body {
   background: none;
   border: none;
   border-bottom: 3px solid #c4c4c4;
-  width: 557px;
+  width: 381px;
   height: 52px;
-  padding: 0;
+  padding-left: 17px;
+}
+
+.subscribe-form input:focus {
+  width: 557px;
 }
 
 .subscribe-terms {
@@ -981,10 +1079,27 @@ body {
   margin-left: -4px;
 }
 
+.subscribe-button:hover {
+  border-color: #000000;
+}
+
+.subscribe-button:active {
+  opacity: 0.3;
+}
+
 .subscribe-feature {
-  width: 160px;
+  min-width: 160px;
   margin-left: auto;
   align-self: center;
+}
+
+.subscribe-feature::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-image: url("/images/v-sign.svg");
+  margin-right: 17px;
 }
 
 .page-footer {
@@ -1010,19 +1125,45 @@ body {
   flex-direction: column;
 }
 
-.page-footer-logo {
+.footer-logo {
   margin-top: 62px;
   margin-bottom: 35px;
+  width: 145px;
+  height: 36px;
+}
+
+.footer-logo svg {
+  display: inline-block;
+  width: 145px;
+  height: 36px;
+}
+
+.footer-contacts svg:hover {
+  opacity: 0.6;
+}
+
+.footer-contacts svg:active {
+  opacity: 0.3;
 }
 
 .footer-adress {
   margin: 0;
 }
 
+.footer-adress::after {
+  content: '';
+  display: inline-block;
+  width: 80px;
+  height: 7px;
+  background-color: #ffc700;
+  margin-top: 64px;
+}
+
 .adress-text {
   line-height: 19px;
   font-style: normal;
   min-width: 245px;
+  margin: 0;
 }
 
 .footer-navigation-social-container {
@@ -1054,6 +1195,16 @@ body {
   text-transform: uppercase;
 }
 
+.footer-navigation-link:hover {
+  color: #ffc700;
+  border-bottom: 2px solid #ffc700;
+  padding-bottom: 4px;
+}
+
+.footer-navigation-link:active {
+  opacity: 0.3;
+}
+
 .footer-social-list {
   padding: 0;
   margin: 0;
@@ -1068,6 +1219,15 @@ body {
   display: block;
   width: 40px;
   height: 40px;
+}
+
+.footer-social-link:hover svg circle {
+  fill: #ffc700;
+  fill-opacity: 1;
+}
+
+.footer-social-link:active svg path {
+  opacity: 0.3;
 }
 
 .footer-social-item:not(:last-child) {
@@ -1089,6 +1249,14 @@ body {
   color: #ffffff;
 }
 
+.footer-contacts-phone:hover {
+  color: #ffc700;
+}
+
+.footer-contacts-phone:active {
+  opacity: 0.3;
+}
+
 .htmlacademy-link {
   display: block;
   margin: 0;
@@ -1097,6 +1265,14 @@ body {
   margin-left: auto;
   width: 115px;
   height: 33px;
+}
+
+.htmlacademy-link:hover svg path {
+  fill: #ffffff;
+}
+
+.htmlacademy-link:active svg {
+  opacity: 0.3;
 }
 
 .footer-social-item span,
