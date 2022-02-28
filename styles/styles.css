@@ -166,6 +166,7 @@ body {
   width: 160px;
   padding: 8px 0;
   margin-left: -6px;
+  cursor: pointer;
 }
 
 .search-button:disabled {
@@ -1093,6 +1094,7 @@ body {
   height: 58px;
   padding: 0;
   margin-left: -4px;
+  cursor: pointer;
 }
 
 .subscribe-button:hover {
