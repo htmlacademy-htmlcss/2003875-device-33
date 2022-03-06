@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Каталог-интернет-магазин «Девайс»</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
         <link rel="stylesheet" href="styles/styles.css">
     </head>
 
@@ -27,10 +28,10 @@
               <a class="navigation-link-top" href="#">Коля Петухов</a>
             </li>
             <li class="navigation-item-top">
-              <a class="navigation-link-top" href="#">Выйти</a>
+              <a class="navigation-link-top log-out-link" href="#">Выйти</a>
             </li>
             <li class="navigation-item-top align-right">
-              <a class="navigation-link-top" href="#">Сравнить</a>
+              <a class="navigation-link-top compare-link" href="#">Сравнить</a>
             </li>
             <li class="navigation-item-top">
               <a class="navigation-link-top" href="#">
@@ -46,18 +47,18 @@
                       <img class="device-image-small" src="images/catalog/product-1-small.jpg" width="39" height="43" alt="Стандартная селфи-палка.">
                       <p class="device-title">Любительская селфи-палка</p>
                     </a>
-                    <a class="cart-list-delete-button" href="#">
-                      <span class="visually-hidden">Закрыть</span>
-                    </a>
+                    <button class="cart-list-delete-button" type="button">
+                      <span class="visually-hidden">Удалить</span>
+                    </button>
                   </li>
                   <li class="cart-list-item">
                     <a class="cart-list-link" href="#">
                       <img class="device-image-small" src="images/catalog/product-2-small.jpg" width="39" height="43" alt="Длинная селфи-палка с управлением.">
                       <p class="device-title">Профессиональная селфи-палка</p>
                     </a>
-                    <a class="cart-list-delete-button" href="#">
-                      <span class="visually-hidden">Закрыть</span>
-                    </a>
+                    <button class="cart-list-delete-button" type="button">
+                      <span class="visually-hidden">Удалить</span>
+                    </button>
                   </li>
                 </ul>
                 <div class="cart-list-total">
@@ -138,7 +139,7 @@
             </ul>
           </header>
 
-          <div class="page-container">
+          <div class="page-container-catalog">
             <h2 class="visually-hidden">Список товаров с фильтрами</h2>
             <section class="catalog-filters">
               <h3 class="catalog-filter-headline">Фильтр:</h3>
@@ -148,10 +149,10 @@
                   <div class="range">
                     <div class="range-scale">
                       <div class="range-bar" style="left: 0; width: 119px">
-                        <button class="range-toggle toggle-min">
+                        <button class="range-toggle toggle-min" type="button">
                           <span class="visually-hidden">Изменить минимальную цену.</span>
                         </button>
-                        <button class="range-toggle toggle-max">
+                        <button class="range-toggle toggle-max" type="button">
                           <span class="visually-hidden">Изменить максимальную цену.</span>
                         </button>
                       </div>
@@ -236,10 +237,10 @@
                 <option value="cheap">По цене</option>
                 <option value="new">По новизне</option>
               </select>
-              <a href="#" class="sort-button align-right" type="button" >
+              <a href="#" class="sort-button align-right">
                 <span class="visually-hidden">По возрастанию</span>
               </a>
-              <a href="#" class="sort-button sort-down" type="button">
+              <a href="#" class="sort-button sort-down">
                 <span class="visually-hidden">По убыванию</span>
               </a>
             </section>
@@ -278,7 +279,7 @@
                   </a>
                 </li>
                 <li class="product-card-item">
-                  <a class="product-card-link new" href="product.html">
+                  <a class="product-card-link" href="product.html">
                     <img class="product-card-image" src="images/catalog/product-4.jpg" width="360" height="380" alt="Селфи-палка в форме руки.">
                     <div class="product-card-mask"><span class="product-card-info">Подробнее</span></div>
                     <div class="product-card-wrapper">
@@ -294,23 +295,25 @@
                 <li class="pagination-item">
                   <a class="pagination-link pagination-prev" href="#">Назад</a>
                 </li>
-                <div class="pagination-wrapper">
-                  <li class="pagination-item">
-                    <a class="pagination-link pagination-current" href="#">1</a>
-                  </li>
-                  <li class="pagination-item">
-                    <a class="pagination-link" href="#">2</a>
-                  </li>
-                  <li class="pagination-item">
-                    <a class="pagination-link" href="#">3</a>
-                  </li>
-                  <li class="pagination-item">
-                    <a class="pagination-link" href="#">...</a>
-                  </li>
-                  <li class="pagination-item">
-                    <a class="pagination-link" href="#">15</a>
-                  </li>
-                </div>
+                <li class="pagination-item">
+                  <ul class="pagination-wrapper">
+                    <li class="pagination-item">
+                      <a class="pagination-link" href="#">1</a>
+                    </li>
+                    <li class="pagination-item">
+                      <a class="pagination-link" href="#">2</a>
+                    </li>
+                    <li class="pagination-item">
+                      <a class="pagination-link" href="#">3</a>
+                    </li>
+                    <li class="pagination-item">
+                      <a class="pagination-link" href="#">...</a>
+                    </li>
+                    <li class="pagination-item">
+                      <a class="pagination-link" href="#">15</a>
+                    </li>
+                  </ul>
+                </li>
                 <li class="pagination-item">
                   <a class="pagination-link pagination-next" href="#">Вперёд</a>
                 </li>
